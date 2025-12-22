@@ -1,0 +1,19 @@
+sudo apt install python3-full
+python3 -m venv .venv
+source .venv/bin/activate
+pip install pytest
+
+python -m pip install --upgrade pip
+
+python -m pip install --upgrade package_name
+
+(.venv) maksim@maksim-pc:~/python-crash-course/chapter_11$ pytest 
+================================================================================= test session starts ==================================================================================
+platform linux -- Python 3.12.3, pytest-9.0.2, pluggy-1.6.0
+rootdir: /home/maksim/python-crash-course/chapter_11
+collected 1 item                                                                                                                                                                       
+
+test_name_function.py .                                                                                                                                                          [100%]
+
+================================================================================== 1 passed in 0.01s ===================================================================================
+(.venv) maksim@maksim-pc:~/python-crash-course/chapter_11$ 
