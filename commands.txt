@@ -17,3 +17,16 @@ test_name_function.py .                                                         
 
 ================================================================================== 1 passed in 0.01s ===================================================================================
 (.venv) maksim@maksim-pc:~/python-crash-course/chapter_11$ 
+
+
+maksim@maksim-pc:~/python-crash-course/alien_invasion$ python3 -m venv .venv
+maksim@maksim-pc:~/python-crash-course/alien_invasion$ source .venv/bin/activate
+(.venv) maksim@maksim-pc:~/python-crash-course/alien_invasion$ pip install pygame
+Collecting pygame
+  Downloading pygame-2.6.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (12 kB)
+Downloading pygame-2.6.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (14.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.0/14.0 MB 10.9 MB/s eta 0:00:00
+Installing collected packages: pygame
+Successfully installed pygame-2.6.1
+(.venv) maksim@maksim-pc:~/python-crash-course/alien_invasion$ 
+
