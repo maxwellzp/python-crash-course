@@ -37,6 +37,7 @@ class AlienInvasion:
       self._check_events()
       self.ship.update()
       self._update_bullets()
+      self._update_aliens()
       self._update_screen()
       self.clock.tick(60)
   
@@ -74,11 +75,12 @@ class AlienInvasion:
       new_bullet = Bullet(self)
       self.bullets.add(new_bullet)
     
-  def _create_alien(self, x_position):
-    """Create an alien and place it in the row."""
+  def _create_alien(self, x_position, y_position):
+    """Create an alien and place it in the fleet."""
     new_alien = Alien(self)
     new_alien.x = x_position
     new_alien.rect.x = x_position
+    new_alien.rect.y = y_position
     self.aliens.add(new_alien)
   
   def _create_fleet(self):
@@ -119,6 +121,10 @@ class AlienInvasion:
       if bullet.rect.bottom <= 0:
         self.bullets.remove(bullet)
     # print(len(self.bullets))
+
+  def _update_aliens(self):
+    """Update the positions of all aliens in the fleet."""
+    self.aliens.update()
   
 if __name__ == '__main__':
   # Make a game instance, and run the game.
