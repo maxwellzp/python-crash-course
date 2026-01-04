@@ -1,0 +1,18 @@
+# Virtual environments
+.venv/
+venv/
+env/
+ll_env/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / editor
+.vscode/
+.idea/

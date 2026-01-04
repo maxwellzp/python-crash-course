@@ -143,3 +143,76 @@ Successfully installed certifi-2025.11.12 charset_normalizer-3.4.4 idna-3.11 req
 (.venv) maksim@maksim-pc:~/python-crash-course/chapter_17$ 
 
 
+python3 -m venv ll_env
+
+
+maksim@maksim-pc:~/python-crash-course/learning_log$ source ll_env/bin/activate
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ deactivate 
+maksim@maksim-pc:~/python-crash-course/learning_log$ source ll_env/bin/activate
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ pip install django
+Collecting django
+  Downloading django-6.0-py3-none-any.whl.metadata (3.9 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Downloading asgiref-3.11.0-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+Downloading django-6.0-py3-none-any.whl (8.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.3/8.3 MB 9.6 MB/s eta 0:00:00
+Downloading asgiref-3.11.0-py3-none-any.whl (24 kB)
+Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.1/46.1 kB 3.8 MB/s eta 0:00:00
+Installing collected packages: sqlparse, asgiref, django
+Successfully installed asgiref-3.11.0 django-6.0 sqlparse-0.5.5
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
+
+
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ django-admin startproject ll_project .
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ ls
+ll_env  ll_project  manage.py
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ ls ll_project/
+asgi.py  __init__.py  settings.py  urls.py  wsgi.py
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
+
+
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
+
+
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ python manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+January 04, 2026 - 12:54:23
+Django version 6.0, using settings 'll_project.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+
+WARNING: This is a development server. Do not use it in a production setting. Use a production WSGI or ASGI server instead.
+For more information on production servers see: https://docs.djangoproject.com/en/6.0/howto/deployment/
+[04/Jan/2026 12:54:43] "GET / HTTP/1.1" 200 12068
+Not Found: /favicon.ico
+[04/Jan/2026 12:54:43] "GET /favicon.ico HTTP/1.1" 404 2212
+
+
