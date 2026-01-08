@@ -284,4 +284,12 @@ Running migrations:
 (ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
 
 
+maksim@maksim-pc:~/python-crash-course/learning_log$ source ll_env/bin/activate
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ python manage.py startapp accounts
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ ls
+accounts  db.sqlite3  learning_logs  ll_env  ll_project  manage.py
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ ls accounts/
+admin.py  apps.py  __init__.py  migrations  models.py  tests.py  views.py
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
+
 
