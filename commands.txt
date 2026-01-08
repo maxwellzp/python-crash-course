@@ -293,3 +293,45 @@ admin.py  apps.py  __init__.py  migrations  models.py  tests.py  views.py
 (ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
 
 
+
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ python manage.py shell
+14 objects imported automatically (use -v 2 for details).
+
+Python 3.12.3 (main, Nov  6 2025, 13:44:16) [GCC 13.3.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from django.contrib.auth.models import User
+>>> User.objects.all()
+<QuerySet [<User: ll_admin>, <User: tester>]>
+>>> for user in User.objects.all():
+...     print(user.username, user.id)
+... 
+ll_admin 1
+tester 2
+
+
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ python manage.py makemigrations learning_logs
+It is impossible to add a non-nullable field 'owner' to topic without specifying a default. This is because the database needs something to populate existing rows.
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit and manually define a default value in models.py.
+Select an option: 1
+Please enter the default value as valid Python.
+The datetime and django.utils.timezone modules are available, so it is possible to provide e.g. timezone.now as a value.
+Type 'exit' to exit this prompt
+>>> 1
+Migrations for 'learning_logs':
+  learning_logs/migrations/0003_topic_owner.py
+    + Add field owner to topic
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
+
+
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, learning_logs, sessions
+Running migrations:
+  Applying learning_logs.0003_topic_owner... OK
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$
+
+
+
