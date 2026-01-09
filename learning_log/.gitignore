@@ -16,3 +16,6 @@ __pycache__/
 # OS / editor
 .vscode/
 .idea/
+
+# Database
+*.sqlite3
