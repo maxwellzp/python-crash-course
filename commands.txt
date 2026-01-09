@@ -334,4 +334,17 @@ Running migrations:
 (ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$
 
 
+maksim@maksim-pc:~/python-crash-course/learning_log$ source ll_env/bin/activate
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ pip install django-bootstrap5
+Collecting django-bootstrap5
+  Downloading django_bootstrap5-26.1-py3-none-any.whl.metadata (4.0 kB)
+Requirement already satisfied: django>=4.2 in ./ll_env/lib/python3.12/site-packages (from django-bootstrap5) (6.0)
+Requirement already satisfied: asgiref>=3.9.1 in ./ll_env/lib/python3.12/site-packages (from django>=4.2->django-bootstrap5) (3.11.0)
+Requirement already satisfied: sqlparse>=0.5.0 in ./ll_env/lib/python3.12/site-packages (from django>=4.2->django-bootstrap5) (0.5.5)
+Downloading django_bootstrap5-26.1-py3-none-any.whl (26 kB)
+Installing collected packages: django-bootstrap5
+Successfully installed django-bootstrap5-26.1
+(ll_env) maksim@maksim-pc:~/python-crash-course/learning_log$ 
+
+
 
